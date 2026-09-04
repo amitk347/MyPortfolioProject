@@ -1,0 +1,36 @@
+.card{
+    box-shadow: 8px 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    height: 100%;
+    transition: 0.3s;
+    width: 200px;
+}
+.card:hover{
+    box-shadow: 1px 10px 16px 0 rgba(0, 0, 0, 0.3);
+}
+.card_title{
+    padding-top: 0px;
+    text-align: center;
+    color: #666666;
+    font-weight: bold;
+}
+.card_text{
+    text-align: center;
+    font-weight: 300;
+    color: #66686b;
+    padding-top: 0px;
+}
+.card_image{
+    padding-top: 10px;
+    text-align: center;
+    margin: 5vh 0;
+}
+.card_image img{
+    width: 50%;
+}
+.title_heading{
+    padding-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+}
