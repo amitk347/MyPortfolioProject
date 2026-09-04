@@ -1,0 +1,81 @@
+h1 {
+    font-size: 1.5rem;
+    color: #80b0b0;
+    text-decoration: underline;
+    text-underline-offset: 6px; /* adds breathing room below the text */
+}
+/* Card Container */
+.card_wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Hover Lift & Shadow */
+.card_wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper to constrain image zoom overflow */
+.image_container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Subtle image scale on card hover */
+.image_container img {
+    max-height: 120px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.card_wrapper:hover .image_container img {
+    transform: scale(1.06);
+}
+
+/* Typography Styling */
+.title_class {
+    margin-top: 1rem;
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: color 0.2s ease;
+    pointer-events: none;
+}
+
+/* Optional text highlight on hover */
+.card_wrapper:hover .title_class {
+    color: #1a73e8;
+}
+/* media query for mobile */
+@media only screen and (max-width: 640px) {
+    
+    .image_section img{
+    height: 12rem;
+    width: 100%;
+    background-size: cover;
+    margin-top: 2rem;
+}
+.overlay{
+    position: absolute;
+    height: 12rem;
+    width: 100%;
+    opacity: 0.6;
+    background-color: black;
+    border-radius: 0.5rem;
+    }
+}

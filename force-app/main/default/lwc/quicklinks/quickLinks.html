@@ -1,0 +1,21 @@
+<template>
+    <div class="quicklinks slds-p-around_large">
+        <h1 class="slds-text-heading_large slds-text-align_center slds-m-bottom_large">
+            Quick Links
+        </h1> 
+        <!-- Grid Row -->
+        <div class="slds-grid slds-wrap slds-gutters">
+            <template for:each={data} for:item="quick">
+                <div key={quick.id} class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 slds-m-bottom_medium">
+                <!-- Click event and data-id must be on this element -->
+                    <div class="card_wrapper" data-id={quick.id} onclick={handleClick}>
+                        <div class="image_container">
+                            <img src={quick.image} alt={quick.text} />
+                        </div>
+                        <div class="title_class">{quick.text}</div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>
